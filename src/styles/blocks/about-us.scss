@@ -1,5 +1,5 @@
 .about-us {
-  @include pageGrid;
+  @include page-grid;
 
   &__intro {
     margin: 0;
@@ -14,11 +14,11 @@
 
     grid-column: 1 / -1;
 
-    @include onTablet {
+    @include on-tablet {
       grid-column: 1 / 4;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       grid-column: span 5;
     }
   }
@@ -26,21 +26,21 @@
   &__content {
     grid-column: 1 / -1;
 
-    @include onTablet {
+    @include on-tablet {
       grid-column: 4 / 7;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       grid-column: span 5;
     }
   }
 
   &__avenue {
-    @include aboutUsContentStyles;
+    @include about-us-content-styles;
   }
 
   &__cloisters {
-    @include aboutUsContentStyles;
+    @include about-us-content-styles;
 
     margin-top: 32px;
   }

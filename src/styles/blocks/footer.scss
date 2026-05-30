@@ -8,7 +8,7 @@
 
   height: 180px;
 
-  @include onTablet {
+  @include on-tablet {
     margin-top: 150px;
     height: 359px;
   }

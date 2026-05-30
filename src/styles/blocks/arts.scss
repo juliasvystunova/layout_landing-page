@@ -7,11 +7,11 @@
     column-gap: 8px;
     grid-template-columns: repeat(var(--columns), 1fr);
 
-    @include onTablet {
+    @include on-tablet {
       column-gap: 24px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       --columns: 12;
     }
   }
@@ -30,11 +30,11 @@
     &--wide {
       grid-column: span 3;
 
-      @include onTablet {
+      @include on-tablet {
         grid-column: span 4;
       }
 
-      @include onDesktop {
+      @include on-desktop {
         grid-column: span 8;
       }
     }
@@ -45,18 +45,18 @@
 
       grid-column: span 3;
 
-      @include onTablet {
+      @include on-tablet {
         grid-column: span 2;
       }
 
-      @include onDesktop {
+      @include on-desktop {
         grid-column: span 4;
       }
 
       &--mid {
         grid-column: span 2;
 
-        @include onDesktop {
+        @include on-desktop {
           grid-column: span 4;
         }
       }
