@@ -1,0 +1,151 @@
+@mixin onTablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin contentPaddingInline() {
+  padding-inline: 20px;
+
+  @include onTablet {
+    padding-inline: 72px;
+  }
+
+  @include onDesktop {
+    padding-inline: 120px;
+    max-width: 1020px;
+    margin-inline: auto;
+  }
+}
+
+.container {
+  @include contentPaddingInline;
+}
+
+@mixin hover($property, $toValue) {
+  transition: #{$property} 0.3s;
+  &:hover {
+    #{$property}: $toValue;
+  }
+}
+
+@mixin aboutUsContentStyles {
+  margin: 0;
+
+  &-title {
+    margin: 0;
+  }
+
+  &-timetable {
+    margin: 0;
+    margin-top: 16px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+    &--hours {
+      display: grid;
+      row-gap: 8px;
+
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-weight: 700;
+    }
+
+    &--days {
+      display: grid;
+      row-gap: 8px;
+
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  &-closed {
+    margin: 0;
+    margin-top: 16px;
+  }
+}
+
+@mixin pageGrid {
+  --columns: 2;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+  font-size: 16px;
+  line-height: 27px;
+
+  @include onTablet {
+    --columns: 6;
+    column-gap: 24px;
+  }
+
+  @include onDesktop {
+    --columns: 12;
+    column-gap: 24px;
+  }
+}
+
+@mixin buttonStyles {
+  height: 56px;
+  border: none;
+  color: $title-text-color;
+  background-color: $accent-main-color;
+  font-family: Cinzel, serif;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background-color $transition-time;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+
+  &:active {
+    background-color: $button-active-color;
+  }
+}
+
+@mixin inputStyles {
+  width: 100%;
+  border: 1px transparent;
+  background-color: $input-background-color;
+
+  &::placeholder {
+    color: $input-placeholder-color;
+    font-family: Cinzel, serif;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    border: 1px $input-border-color;
+
+    &::placeholder {
+      color: $main-text-color;
+    }
+  }
+
+  &:focus {
+    border: 1px $main-text-color;
+    font-family: Cinzel, serif;
+    font-size: 14px;
+    line-height: 20px;
+
+    &::placeholder {
+      color: $main-text-color;
+    }
+  }
+}

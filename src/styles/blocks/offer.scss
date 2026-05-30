@@ -1,0 +1,21 @@
+.offer {
+  &__photo {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 4px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 140%;
+    color: $accent-main-color;
+  }
+
+  &__text {
+    margin: 0;
+    text-align: center;
+  }
+}
