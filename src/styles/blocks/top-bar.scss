@@ -9,9 +9,18 @@
     padding-block: 50px;
   }
 
+  &__information {
+    display: flex;
+    height: 65px;
+    align-items: center;
+    position: relative;
+  }
+
   &__icons {
     display: flex;
     gap: 24px;
+    position: relative;
+    align-items: center;
   }
 
   &__logo-link {
