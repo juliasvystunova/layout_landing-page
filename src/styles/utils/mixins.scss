@@ -95,7 +95,7 @@
 
   @include on-desktop {
     --columns: 12;
-    
+
     column-gap: 24px;
   }
 }
@@ -126,6 +126,8 @@
   width: 100%;
   border: 1px transparent;
   background-color: $input-background-color;
+  padding: 14px 16px;
+  box-sizing: border-box;
 
   &::placeholder {
     color: $input-placeholder-color;
