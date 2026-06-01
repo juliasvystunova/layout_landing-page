@@ -3,6 +3,7 @@
     margin-bottom: 24px;
 
     --columns: 6;
+    
     display: grid;
     column-gap: 8px;
     grid-template-columns: repeat(var(--columns), 1fr);

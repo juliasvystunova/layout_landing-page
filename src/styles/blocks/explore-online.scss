@@ -1,6 +1,7 @@
 .explore-online {
   &__offers {
     @include page-grid;
+    
     row-gap: 48px;
   }
 
