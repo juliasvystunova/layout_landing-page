@@ -124,7 +124,7 @@
 
 @mixin input-styles {
   width: 100%;
-  border: 1px transparent;
+  border: 1px solid transparent;
   background-color: $input-background-color;
   padding: 14px 16px;
   box-sizing: border-box;
@@ -137,7 +137,7 @@
   }
 
   &:hover {
-    border: 1px $input-border-color;
+    border-color: $input-border-color;
 
     &::placeholder {
       color: $main-text-color;
@@ -145,10 +145,7 @@
   }
 
   &:focus {
-    border: 1px $main-text-color;
-    font-family: Cinzel, serif;
-    font-size: 14px;
-    line-height: 20px;
+    border-color: $main-text-color;
 
     &::placeholder {
       color: $main-text-color;
