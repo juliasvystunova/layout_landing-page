@@ -16,10 +16,6 @@
       rel="stylesheet"
       href="src/styles/styles.scss"
     />
-    <script
-      src="src/scripts/main.js"
-      defer
-    ></script>
   </head>
   <!-- #endregion -->
   <body class="page__body">
@@ -422,5 +418,15 @@
     </main>
 
     <footer class="footer"></footer>
+    <script>
+      const iconMenu = document.querySelector('.icon--menu');
+      const iconClose = document.querySelector('.icon--close');
+      iconMenu.addEventListener('click', () => {
+        document.body.classList.add('page__body--menu-open');
+      });
+      iconClose.addEventListener('click', () => {
+        document.body.classList.remove('page__body--menu-open');
+      });
+    </script>
   </body>
 </html>
