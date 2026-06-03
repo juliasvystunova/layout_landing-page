@@ -84,10 +84,8 @@
     }
 
     &--textarea {
-      font-family: Cinzel, serif;
-      font-size: 14px;
-      line-height: 20px;
       margin-bottom: 32px;
+      resize: none;
 
       @include input-styles;
     }
